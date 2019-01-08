@@ -45,6 +45,8 @@
 		879E470621E4D0F500B5A10B /* SlotFrameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotFrameCalculator.swift; sourceTree = "<group>"; };
 		879E470821E4D14700B5A10B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		879E470A21E4D1B600B5A10B /* SlotFrameCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotFrameCalculatorTests.swift; sourceTree = "<group>"; };
+		879E471021E4D93E00B5A10B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		879E471121E4D93E00B5A10B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 		879E46D821E4CACB00B5A10B = {
 			isa = PBXGroup;
 			children = (
+				879E471121E4D93E00B5A10B /* .gitignore */,
+				879E471021E4D93E00B5A10B /* README.md */,
 				879E46E421E4CACB00B5A10B /* GridView */,
 				879E46EF21E4CACB00B5A10B /* GridViewTests */,
 				879E46E321E4CACB00B5A10B /* Products */,
