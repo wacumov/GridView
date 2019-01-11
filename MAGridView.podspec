@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MAGridView'
-  s.version      = '0.1'
+  s.version      = '0.2'
   s.summary      = 'A UIView subclass that layouts its subviews in a quilting pattern.'
   s.description  = <<-DESC
 The library does nothing except calculating frames for "slots" inside a grid.
