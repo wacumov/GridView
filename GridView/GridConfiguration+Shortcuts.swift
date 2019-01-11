@@ -6,12 +6,6 @@
 //  Copyright © 2018 Mikhail Akopov. All rights reserved.
 //
 
-public extension GridConfiguration.Offset.Value {
-    public static var zero: GridConfiguration.Offset.Value {
-        return .init(x: 0, y: 0)
-    }
-}
-
 public extension GridConfiguration.Offset {
     public static var zero: GridConfiguration.Offset {
         return .value(.zero)

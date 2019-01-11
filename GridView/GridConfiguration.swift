@@ -21,18 +21,8 @@ public struct GridConfiguration {
     }
     
     public enum Offset {
-        case ratio(Ratio)
-        case value(Value)
-        
-        public struct Ratio {
-            let x: CGFloat
-            let y: CGFloat
-        }
-        
-        public struct Value {
-            let x: CGFloat
-            let y: CGFloat
-        }
+        case ratio(CGVector)
+        case value(CGSize)
     }
     
     public enum CellAspectRatio {

@@ -24,9 +24,9 @@ final class SlotFrameCalculator {
         let innerOffset: CGSize = {
             switch configuration.innerOffset {
             case .value(let value):
-                return CGSize(width: value.x, height: value.y)
+                return value
             case .ratio(let ratio):
-                return CGSize(width: ratio.x * cellSize.width, height: ratio.y * cellSize.height)
+                return CGSize(width: ratio.dx * cellSize.width, height: ratio.dy * cellSize.height)
             }
         }()
         let topLeftCellOrigin = calculateTopLeftCellOrigin(gridSize: gridSize, cellSize: cellSize, innerOffset: innerOffset)
@@ -57,23 +57,23 @@ final class SlotFrameCalculator {
         switch (configuration.innerOffset, configuration.outerOffset) {
             
         case (.ratio(let innerRatio), .ratio(let outerRatio)):
-            let width: CGFloat = gridSize.width / (columns + innerRatio.x * (columns - 1.0) + outerRatio.x * 2.0)
-            let height: CGFloat = gridSize.height / (rows + innerRatio.y * (rows - 1.0) + outerRatio.y * 2.0)
+            let width: CGFloat = gridSize.width / (columns + innerRatio.dx * (columns - 1.0) + outerRatio.dx * 2.0)
+            let height: CGFloat = gridSize.height / (rows + innerRatio.dy * (rows - 1.0) + outerRatio.dy * 2.0)
             return CGSize(width: width, height: height)
             
         case (.value(let innerValue), .ratio(let outerRatio)):
-            let width: CGFloat = (gridSize.width - innerValue.x * (columns - 1.0)) / (columns + outerRatio.x * 2.0)
-            let height: CGFloat = (gridSize.height - innerValue.y * (rows - 1.0)) / (rows + outerRatio.y * 2.0)
+            let width: CGFloat = (gridSize.width - innerValue.width * (columns - 1.0)) / (columns + outerRatio.dx * 2.0)
+            let height: CGFloat = (gridSize.height - innerValue.height * (rows - 1.0)) / (rows + outerRatio.dy * 2.0)
             return CGSize(width: width, height: height)
             
         case (.ratio(let innerRatio), .value(let outerValue)):
-            let width: CGFloat = (gridSize.width - outerValue.x * 2.0) / (columns + innerRatio.x * (columns - 1.0))
-            let height: CGFloat = (gridSize.height - outerValue.y * 2.0) / (rows + innerRatio.y * (rows - 1.0))
+            let width: CGFloat = (gridSize.width - outerValue.width * 2.0) / (columns + innerRatio.dx * (columns - 1.0))
+            let height: CGFloat = (gridSize.height - outerValue.height * 2.0) / (rows + innerRatio.dy * (rows - 1.0))
             return CGSize(width: width, height: height)
             
         case (.value(let innerValue), .value(let outerValue)):
-            let width: CGFloat = (gridSize.width - outerValue.x * 2.0 - innerValue.x * (columns - 1.0)) / columns
-            let height: CGFloat = (gridSize.height - outerValue.y * 2.0 - innerValue.y * (rows - 1.0)) / rows
+            let width: CGFloat = (gridSize.width - outerValue.width * 2.0 - innerValue.width * (columns - 1.0)) / columns
+            let height: CGFloat = (gridSize.height - outerValue.height * 2.0 - innerValue.height * (rows - 1.0)) / rows
             return CGSize(width: width, height: height)
         }
     }
@@ -96,9 +96,9 @@ final class SlotFrameCalculator {
         case .dependsOnGrid:
             switch configuration.outerOffset {
             case .ratio(let outerRatio):
-                return CGPoint(x: cellSize.width * outerRatio.x, y: cellSize.height * outerRatio.y)
+                return CGPoint(x: cellSize.width * outerRatio.dx, y: cellSize.height * outerRatio.dy)
             case .value(let outerValue):
-                return CGPoint(x: outerValue.x, y: outerValue.y)
+                return CGPoint(x: outerValue.width, y: outerValue.height)
             }
         case .fixed:
             return CGPoint(x: (gridSize.width - cellSize.width * columns - innerOffset.width * (columns - 1.0)) / 2.0,

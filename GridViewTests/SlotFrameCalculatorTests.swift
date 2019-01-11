@@ -27,7 +27,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForOnlySquareSlotWithOuterValueOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(outerOffset: .value(.init(x: 10, y: 10))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(outerOffset: .value(.init(width: 10, height: 10))))
         let slot: Slot = .make1x1Slot(row: 0, column: 0)
         let gridSize = CGSize(width: 100, height: 100)
         
@@ -41,7 +41,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForOnlySquareSlotWithOuterRatioOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(outerOffset: .ratio(.init(x: 0.1, y: 0.1))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(outerOffset: .ratio(.init(dx: 0.1, dy: 0.1))))
         let slot: Slot = .make1x1Slot(row: 0, column: 0)
         let gridSize = CGSize(width: 120, height: 120)
         
@@ -55,7 +55,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForOnlySquareSlotWithInnerValueOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(innerOffset: .value(.init(x: 10, y: 10))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(innerOffset: .value(.init(width: 10, height: 10))))
         let slot: Slot = .make1x1Slot(row: 0, column: 0)
         let gridSize = CGSize(width: 100, height: 100)
         
@@ -69,7 +69,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForOnlySquareSlotWithInnerRatioOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(innerOffset: .ratio(.init(x: 0.1, y: 0.1))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlots1x1Configuration(innerOffset: .ratio(.init(dx: 0.1, dy: 0.1))))
         let slot: Slot = .make1x1Slot(row: 0, column: 0)
         let gridSize = CGSize(width: 100, height: 100)
         
@@ -111,7 +111,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForBottomRightSquareSlotIn2x2GridWithOuterValueOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, outerOffset: .value(.init(x: 10, y: 10))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, outerOffset: .value(.init(width: 10, height: 10))))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 100, height: 100)
         
@@ -125,7 +125,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForBottomRightSquareSlotIn2x2GridWithOuterRatioOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, outerOffset: .ratio(.init(x: 0.2, y: 0.2))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, outerOffset: .ratio(.init(dx: 0.2, dy: 0.2))))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 120, height: 120)
         
@@ -139,7 +139,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForBottomRightSquareSlotIn2x2GridWithInnerValueOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, innerOffset: .value(.init(x: 10, y: 10))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, innerOffset: .value(.init(width: 10, height: 10))))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 100, height: 100)
         
@@ -153,7 +153,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForBottomRightSquareSlotIn2x2GridWithInnerRatioOffset() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, innerOffset: .ratio(.init(x: 0.2, y: 0.2))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 2, columns: 2, innerOffset: .ratio(.init(dx: 0.2, dy: 0.2))))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 110, height: 110)
         
@@ -167,7 +167,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForCentralSquareSlotIn3x3GridWithInnerValueAndOuterRatioOffsets() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 3, columns: 3, innerOffset: .value(.init(x: 10, y: 10)), outerOffset: .ratio(.init(x: 0.2, y: 0.2))))
+        let calculator = SlotFrameCalculator(configuration: .makeSquareSlotsConfiguration(rows: 3, columns: 3, innerOffset: .value(.init(width: 10, height: 10)), outerOffset: .ratio(.init(dx: 0.2, dy: 0.2))))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 190, height: 190)
         
@@ -181,7 +181,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForCentralNonFixedRatioSlotIn3x3GridWithInnerRatioAndOuterRatioOffsets() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .ratio(.init(x: 0.2, y: 0.2)), outerOffset: .ratio(.init(x: 0.2, y: 0.2)), cellAspectRatio: .dependsOnGrid))
+        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .ratio(.init(dx: 0.2, dy: 0.2)), outerOffset: .ratio(.init(dx: 0.2, dy: 0.2)), cellAspectRatio: .dependsOnGrid))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 190, height: 380)
         
@@ -195,7 +195,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForCentralNonFixedRatioSlotIn3x3GridWithInnerValueAndOuterRatioOffsets() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .value(.init(x: 10, y: 20)), outerOffset: .ratio(.init(x: 0.2, y: 0.2)), cellAspectRatio: .dependsOnGrid))
+        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .value(.init(width: 10, height: 20)), outerOffset: .ratio(.init(dx: 0.2, dy: 0.2)), cellAspectRatio: .dependsOnGrid))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 190, height: 380)
         
@@ -209,7 +209,7 @@ final class SlotFrameCalculatorTests: XCTestCase {
     
     func testFrameForCentralNonFixedRatioSlotIn3x3GridWithNonFittedSizeWithInnerValueAndOuterRatioOffsets() {
         // Given
-        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .value(.init(x: 15, y: 20)), outerOffset: .ratio(.init(x: 0.2, y: 0.2)), cellAspectRatio: .dependsOnGrid))
+        let calculator = SlotFrameCalculator(configuration: .init(gridSize: .init(rows: 3, columns: 3), innerOffset: .value(.init(width: 15, height: 20)), outerOffset: .ratio(.init(dx: 0.2, dy: 0.2)), cellAspectRatio: .dependsOnGrid))
         let slot: Slot = .make1x1Slot(row: 1, column: 1)
         let gridSize = CGSize(width: 200, height: 380)
         
