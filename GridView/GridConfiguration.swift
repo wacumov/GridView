@@ -15,9 +15,24 @@ public struct GridConfiguration {
     public let outerOffset: Offset
     public let cellAspectRatio: CellAspectRatio
     
+    public init(gridSize: Size,
+                innerOffset: Offset,
+                outerOffset: Offset,
+                cellAspectRatio: CellAspectRatio) {
+        self.gridSize = gridSize
+        self.innerOffset = innerOffset
+        self.outerOffset = outerOffset
+        self.cellAspectRatio = cellAspectRatio
+    }
+    
     public struct Size {
         public let rows: Int
         public let columns: Int
+        
+        public init(rows: Int, columns: Int) {
+            self.rows = rows
+            self.columns = columns
+        }
     }
     
     public enum Offset {
