@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import GridView
+@testable import MAGridView
 
 class GridViewTests: XCTestCase {
 

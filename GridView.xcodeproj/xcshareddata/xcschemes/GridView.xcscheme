@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "879E46E121E4CACB00B5A10B"
-               BuildableName = "GridView.framework"
-               BlueprintName = "GridView"
+               BuildableName = "MAGridView.framework"
+               BlueprintName = "MAGridView"
                ReferencedContainer = "container:GridView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "879E46E121E4CACB00B5A10B"
-            BuildableName = "GridView.framework"
-            BlueprintName = "GridView"
+            BuildableName = "MAGridView.framework"
+            BlueprintName = "MAGridView"
             ReferencedContainer = "container:GridView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "879E46E121E4CACB00B5A10B"
-            BuildableName = "GridView.framework"
-            BlueprintName = "GridView"
+            BuildableName = "MAGridView.framework"
+            BlueprintName = "MAGridView"
             ReferencedContainer = "container:GridView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "879E46E121E4CACB00B5A10B"
-            BuildableName = "GridView.framework"
-            BlueprintName = "GridView"
+            BuildableName = "MAGridView.framework"
+            BlueprintName = "MAGridView"
             ReferencedContainer = "container:GridView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import GridView
+@testable import MAGridView
 
 final class SlotFrameCalculatorTests: XCTestCase {
     

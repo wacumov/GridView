@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		879E46EC21E4CACB00B5A10B /* GridView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879E46E221E4CACB00B5A10B /* GridView.framework */; };
+		879E46EC21E4CACB00B5A10B /* MAGridView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879E46E221E4CACB00B5A10B /* MAGridView.framework */; };
 		879E46F121E4CACB00B5A10B /* GridViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E46F021E4CACB00B5A10B /* GridViewTests.swift */; };
 		879E46F321E4CACB00B5A10B /* GridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 879E46E521E4CACB00B5A10B /* GridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		879E46FD21E4CCD900B5A10B /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E46FC21E4CCD900B5A10B /* GridConfiguration.swift */; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		879E46E221E4CACB00B5A10B /* GridView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GridView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879E46E221E4CACB00B5A10B /* MAGridView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MAGridView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879E46E521E4CACB00B5A10B /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		879E46E621E4CACB00B5A10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879E46EB21E4CACB00B5A10B /* GridViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879E46EC21E4CACB00B5A10B /* GridView.framework in Frameworks */,
+				879E46EC21E4CACB00B5A10B /* MAGridView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 		879E46E321E4CACB00B5A10B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				879E46E221E4CACB00B5A10B /* GridView.framework */,
+				879E46E221E4CACB00B5A10B /* MAGridView.framework */,
 				879E46EB21E4CACB00B5A10B /* GridViewTests.xctest */,
 			);
 			name = Products;
@@ -128,9 +128,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		879E46E121E4CACB00B5A10B /* GridView */ = {
+		879E46E121E4CACB00B5A10B /* MAGridView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 879E46F621E4CACB00B5A10B /* Build configuration list for PBXNativeTarget "GridView" */;
+			buildConfigurationList = 879E46F621E4CACB00B5A10B /* Build configuration list for PBXNativeTarget "MAGridView" */;
 			buildPhases = (
 				879E46DD21E4CACB00B5A10B /* Headers */,
 				879E46DE21E4CACB00B5A10B /* Sources */,
@@ -141,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = GridView;
+			name = MAGridView;
 			productName = GridView;
-			productReference = 879E46E221E4CACB00B5A10B /* GridView.framework */;
+			productReference = 879E46E221E4CACB00B5A10B /* MAGridView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		879E46EA21E4CACB00B5A10B /* GridViewTests */ = {
@@ -195,7 +195,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				879E46E121E4CACB00B5A10B /* GridView */,
+				879E46E121E4CACB00B5A10B /* MAGridView */,
 				879E46EA21E4CACB00B5A10B /* GridViewTests */,
 			);
 		};
@@ -247,7 +247,7 @@
 /* Begin PBXTargetDependency section */
 		879E46EE21E4CACB00B5A10B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 879E46E121E4CACB00B5A10B /* GridView */;
+			target = 879E46E121E4CACB00B5A10B /* MAGridView */;
 			targetProxy = 879E46ED21E4CACB00B5A10B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		879E46F621E4CACB00B5A10B /* Build configuration list for PBXNativeTarget "GridView" */ = {
+		879E46F621E4CACB00B5A10B /* Build configuration list for PBXNativeTarget "MAGridView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				879E46F721E4CACB00B5A10B /* Debug */,
