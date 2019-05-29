@@ -7,13 +7,13 @@
 //
 
 public extension Slot.Size {
-    public static func makeSquare(_ size: Int) -> Slot.Size {
+    static func makeSquare(_ size: Int) -> Slot.Size {
         return .init(width: size, height: size)
     }
 }
 
 public extension Slot {
-    public static func make1x1Slot(row: Int, column: Int) -> Slot {
+    static func make1x1Slot(row: Int, column: Int) -> Slot {
         return .init(origin: .init(row: row, column: column), size: .makeSquare(1))
     }
 }

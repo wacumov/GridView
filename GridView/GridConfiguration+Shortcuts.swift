@@ -7,13 +7,13 @@
 //
 
 public extension GridConfiguration.Offset {
-    public static var zero: GridConfiguration.Offset {
+    static var zero: GridConfiguration.Offset {
         return .value(.zero)
     }
 }
 
 public extension GridConfiguration.CellAspectRatio {
-    public static var square: GridConfiguration.CellAspectRatio {
+    static var square: GridConfiguration.CellAspectRatio {
         return .fixed(1.0)
     }
 }
